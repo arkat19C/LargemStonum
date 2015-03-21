@@ -1,0 +1,23 @@
+/* css page */
+
+.background {
+    background-color: darkcyan;
+}
+
+.title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    text-decoration: underline;
+    font-style: italic;
+    color: yellow;
+}
+
+.text {
+    color: yellow;
+}
+
+.media {
+    display: block;
+    margin: 0 auto;
+}

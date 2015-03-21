@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html class="background">
+
+<head>
+  <title>Hugen Stonel Text Gen.</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+<a href="/" style="color: yellow">Home (Will Not Refresh If On Generator)</a>
+<div class="title">Hugen Stonel</div>
+<br>
+<% if @all_data.empty? == false %>
+    <% if @all_data[3] == 'on'%>
+        <div><span style="float: left; padding-right:5px; color: yellow">Un Hugen Stonel no et un mountaina.</span></div>
+    <% end
+       @all_data[2].times do
+         @all_data[1].times do %>
+            <div><span style="color: yellow"><%= rand_paragraph(@all_data[0]) %></span></div>
+            <br>
+        <% end %>
+        <hr>
+    <% end %>
+<% else %>
+    <img src="/exfiles/big_rock.jpg" height="442.5" width="712.5" class="media">
+    <br>
+    <div>
+      <form action="/" method="post">
+        <span style="color: yellow">Sentences Per Paragraph:</span> <br> <input type="number" name="sentences"> <br> <br>
+        <span style="color: yellow">Paragraphs Per Page:</span> <br> <input type="number" name="paragraphs"> <br> <br>
+        <span style="color: yellow">Pages:</span> <br> <input type="number" name="pages"> <br> <br>
+        <input type="checkbox" name="beginning"> <span style="color: yellow">Do you want your text to begin with: <span style="font-style: italic">"Un Hugen Stonel no et un mountaina."</span> ?</span> <br> <br>
+        <div style="color: white; font-weight: bold;">If a non-positive integer (including nothing, symbols, and/or 0) is inputted anywhere, nothing will be outputted and you must go back.</div> <br>
+        <input type="submit">
+      </form>
+    </div>
+<% end %>
+</body>
+
+</html>
